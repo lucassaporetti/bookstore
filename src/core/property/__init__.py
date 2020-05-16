@@ -2,4 +2,4 @@
 #
 # Package: src.core.property
 
-__all__ = ["properties", "book_properties"]
+__all__ = ["properties"]
