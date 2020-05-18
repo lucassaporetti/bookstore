@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
 #
-# Package: src.core
+# Package: bookstore.src.core
 
-__all__ = ["util", "repository", "service", "property"]
+__all__ = ["controller", "enum", "property", "repository", "service", "util", "validator"]

@@ -1,5 +1,5 @@
-from src.core.util.tools import log_init
-from src.main import Main
+from bookstore.src.core.util.tools import log_init
+from bookstore.src.main import Main
 
 LOG = log_init(Main.log_file)
 

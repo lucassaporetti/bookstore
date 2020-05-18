@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import Optional
 
-from src.model.entity import Entity
+from bookstore.src.model.entity import Entity
 
 
 class Repository(ABC):

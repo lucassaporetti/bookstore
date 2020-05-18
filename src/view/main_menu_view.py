@@ -1,10 +1,6 @@
-from src.core.service.book_service import BookService
-from src.view.builder.book_builder import BookBuilder
-from src.view.book_info_ui import BookInfoView
-from src.view.car_rental_ui import CarRentalUi
-from src.view.listing_ui import ListingUi
-from src.view.menu import *
-from src.view.user_ui import UserUi
+from bookstore.src.core.service.book_service import BookService
+from bookstore.src.view.builder.book_builder import BookBuilder
+from bookstore.src.view.menu import *
 
 MENU = """\033[2J\033[H
 \033[0;32m[0]\033[0;0;0m Exit
@@ -21,6 +17,7 @@ class MainMenuView(Menu):
         super().__init__()
         self.menu = str(MENU)
         self.options = range(0, 6)
+        self.book_service = BookService()
 
     def __str__(self):
         return self.menu
@@ -30,16 +27,16 @@ class MainMenuView(Menu):
         if int_op == 0:
             return Menu.EXIT_REQUEST
         elif int_op == 1:
-            self.car_service.save(CarBuilder.build())
+            self.book_service.save(BookBuilder.build())
         elif int_op == 2:
-            return UserUi()
+            pass
         elif int_op == 3:
-            return CarRentalUi()
+            pass
         elif int_op == 4:
-            print('Return a Car')
+            pass
         elif int_op == 5:
-            return CarInfoUi()
+            pass
         elif int_op == 6:
-            return ListingUi()
+            pass
 
         return Menu.SAME_MENU

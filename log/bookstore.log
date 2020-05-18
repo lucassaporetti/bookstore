@@ -1,0 +1,3 @@
+2020-05-18 18:56:35,965 [MainThread] INFO  ::Main(@line-25) Bookstore started 2020-05-18 18:56:35.965804 
+2020-05-18 18:56:35,966 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-18 18:56:35,970 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 

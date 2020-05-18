@@ -1,12 +1,11 @@
-from src.core.repository.db.car_repository import CarRepository
-from src.core.service.service import Service
+from bookstore.src.core.repository.databases.book_repository import BookRepository
+from bookstore.src.core.service.service import Service
+from bookstore.src.model.book import Book
 
-from src.model.car import Car
 
-
-class CarService(Service):
+class BookService(Service):
     def __init__(self):
-        super().__init__(CarRepository())
+        super().__init__(BookRepository())
 
-    def save(self, car: Car):
-        super().save(car)
+    def save(self, book: Book):
+        super().save(book)

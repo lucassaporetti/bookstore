@@ -1,5 +1,5 @@
 # _*_ coding: utf-8 _*_
 #
-# Package: src.sql
+# Package: bookstore.src.sql
 
 __all__ = ["mysql"]

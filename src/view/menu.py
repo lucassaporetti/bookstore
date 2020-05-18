@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-from src.core.tools import print_error, prompt
+from bookstore.src.core.util.tools import print_error, prompt
 
 
 class Menu(ABC):

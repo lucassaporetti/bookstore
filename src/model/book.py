@@ -1,72 +1,49 @@
 import uuid
-
-from src.core.enum.color import Color
-from src.core.enum.fuel import Fuel
-from src.core.enum.yes_no import YesNo
-from src.model.entity import Entity
+from bookstore.src.core.enum.yes_no import YesNo
+from bookstore.src.model.entity import Entity
 
 
-class Car(Entity):
+class Book(Entity):
     @staticmethod
     def of(values: list):
-        return Car(values[0], values[1], values[2], values[3], values[4], values[5], values[6], values[7], values[8])
+        return Book(values[0], values[1], values[2], values[3], values[4])
 
-    def __init__(self, entity_id: str = None, name: str = None, chassis: str = None, color: Color = None,
-                 doors: int = None, fuel: Fuel = None, plate: str = None, price: str = None,
-                 available: YesNo = YesNo.YES):
+    def __init__(self, entity_id: str = None, book_name: str = None, author_name: str = None, published: str = None,
+                 pages: int = None, available: YesNo = YesNo.YES):
         super().__init__(entity_id)
-        self.name = name
-        self.chassis = chassis
-        self.color = color
-        self.doors = doors
-        self.fuel = fuel
-        self.plate = plate
-        self.price = price
+        self.book_name = book_name
+        self.author_name = author_name
+        self.published = published
+        self.pages = pages
         self.available = YesNo(available)
 
     def __str__(self):
-        return "{} | {} | {} | {} | {} | {} | {} | {} | {}".format(
-            super().__str__(), self.name, self.chassis, self.color, self.doors, self.fuel, self.plate, self.price,
-            self.available)
+        return "{} | {} | {} | {} | {} | {}".format(
+            super().__str__(), self.book_name, self.author_name, self.published, self.pages, self.available)
 
     class Builder:
         def __init__(self):
             self.uuid = str(uuid.uuid4())
-            self.name = None
-            self.chassis = None
-            self.color = None
-            self.doors = 3
-            self.fuel = Fuel.FLEX
-            self.plate = None
-            self.price = None
+            self.book_name = None
+            self.author_name = None
+            self.published = None
+            self.pages = 1
             self.available = YesNo.YES
 
-        def with_name(self, name: str):
-            self.name = name
+        def with_book_name(self, book_name: str):
+            self.book_name = book_name
             return self
 
-        def with_chassis(self, chassis: str):
-            self.chassis = chassis
+        def with_author_name(self, author_name: str):
+            self.author_name = author_name
             return self
 
-        def with_color(self, color: Color):
-            self.color = color
+        def with_published(self, published: str):
+            self.published = published
             return self
 
-        def with_doors(self, doors: int):
-            self.doors = doors
-            return self
-
-        def with_fuel(self, fuel: Fuel):
-            self.fuel = fuel
-            return self
-
-        def with_plate(self, plate: str):
-            self.plate = plate
-            return self
-
-        def with_price(self, price: float):
-            self.price = price
+        def with_pages(self, pages: int):
+            self.pages = pages
             return self
 
         def with_available(self, available: YesNo):
@@ -74,7 +51,6 @@ class Car(Entity):
             return self
 
         def build(self):
-            return Car(
-                self.uuid, self.name, self.chassis, self.color, self.doors, self.fuel, self.plate, self.price,
-                self.available
+            return Book(
+                self.uuid, self.book_name, self.author_name, self.published, self.pages, self.available
             )

@@ -3,15 +3,14 @@ import sys
 import uuid
 from abc import abstractmethod
 from typing import Optional
-
 import pymysql
 from pymysql import ProgrammingError, OperationalError
-
-from src.core.properties import Properties
-from src.core.repository.db.db_repository import DbRepository
-from src.core.tools import log_init, print_error
-from src.main import Main
-from src.model.entity import Entity
+from bookstore.src.core.factory.factories import SqlFactory
+from bookstore.src.core.property.properties import Properties
+from bookstore.src.core.repository.databases.db_repository import DbRepository
+from bookstore.src.core.util.tools import log_init, print_error
+from bookstore.src.main import Main
+from bookstore.src.model.entity import Entity
 
 CUR_DIR = pathlib.Path(sys.argv[0]).parent.absolute()
 DB_PROPERTIES = Properties(f"{CUR_DIR}/db.properties").read()

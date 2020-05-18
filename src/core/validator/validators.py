@@ -2,7 +2,7 @@ import re
 from datetime import datetime
 from typing import Type
 
-from src.core.tools import is_integer, is_float
+from bookstore.src.core.util.tools import is_integer, is_float
 
 
 def validate_string(string: str, pattern: str, min_len: int = 0, max_len: int = 30):
