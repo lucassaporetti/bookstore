@@ -1,7 +1,7 @@
 from pymysql import InternalError
 
 from bookstore.src.core.service.book_service import BookService
-from bookstore.src.core.util.tools import print_list, print_warning, print_error, print_one, prompt
+from bookstore.src.core.util.tools import print_list, print_warning, print_error, prompt
 from bookstore.src.view.menu import Menu
 
 MENU = f"""\033[2J\033[H{'-=' * 15}\n\033[0;34m{'EDIT A BOOK':^30}\033[0;0;0m\n{'-=' * 15}

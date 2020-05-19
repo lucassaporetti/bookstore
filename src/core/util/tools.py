@@ -41,6 +41,7 @@ def print_warning(msg: str, arg: str = None):
 
 def print_list(the_list: list):
     print('\033[2J\033[H')
+    print(f"{'-=' * 15}\n\033[0;34m{'ALL BOOKS LIST':^30}\033[0;0;0m\n{'-=' * 15}")
     print('-='*80)
     if the_list and len(the_list) > 0:
         for next_item in the_list:

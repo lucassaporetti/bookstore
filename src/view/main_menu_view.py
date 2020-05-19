@@ -1,4 +1,5 @@
 from bookstore.src.core.service.book_service import BookService
+from bookstore.src.core.util.tools import print_list
 from bookstore.src.view.builder.book_builder import BookBuilder
 from bookstore.src.view.edit_book_view import EditBookView
 from bookstore.src.view.menu import *
@@ -36,7 +37,7 @@ class MainMenuView(Menu):
         elif int_op == 3:
             return EditBookView()
         elif int_op == 4:
-            pass
+            print_list(self.book_service.list())
         elif int_op == 5:
             return SearchBookView()
 

@@ -87,7 +87,8 @@ class MySqlRepository(DbRepository):
             valid = False
             new_book_name = new_author_name = new_published = new_pages = None
             while not valid:
-                new_book_name = prompt("New Book Name: ", clear=True).strip() if new_book_name is None else new_book_name
+                new_book_name = prompt("New Book Name: ", clear=True).strip() if new_book_name \
+                                                                                 is None else new_book_name
                 if not validate_string(new_book_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):
                     print_error(f'Invalid name {new_book_name}')
                     new_book_name = None
