@@ -1,3 +1,11 @@
-2020-05-18 21:32:33,921 [MainThread] INFO  ::Main(@line-25) Bookstore started 2020-05-18 21:32:33.921240 
-2020-05-18 21:32:33,921 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
-2020-05-18 21:32:33,923 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 14:27:55,760 [MainThread] INFO  ::Main(@line-25) Bookstore started 2020-05-19 14:27:55.760721 
+2020-05-19 14:27:55,760 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 14:27:55,762 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 14:28:14,565 [MainThread] INFO  ::find_by_id(@line-126) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
+2020-05-19 14:28:14,566 [MainThread] INFO  ::insert(@line-80) Executing SQL statement: INSERT INTO BOOKS (UUID, BOOK_NAME, AUTHOR_NAME, PUBLISHED, PAGES, AVAILABLE) VALUES ('65c9bf37-1abf-4f14-b1d3-e099b1fdf189', 'Gabiroba 4', 'Hugs', '22/04/1999', '145', '1') 
+2020-05-19 14:28:17,424 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 14:28:17,426 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 14:28:20,665 [MainThread] INFO  ::find_all(@line-110) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 14:28:34,403 [MainThread] INFO  ::find_by_id(@line-126) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
+2020-05-19 14:28:34,405 [MainThread] INFO  ::delete(@line-97) Executing SQL statement: DELETE FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
+2020-05-19 14:28:37,529 [MainThread] INFO  ::find_all(@line-110) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  

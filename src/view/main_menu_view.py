@@ -1,6 +1,8 @@
 from bookstore.src.core.service.book_service import BookService
 from bookstore.src.view.builder.book_builder import BookBuilder
 from bookstore.src.view.menu import *
+from bookstore.src.view.remove_book_view import RemoveBookView
+from bookstore.src.view.search_book_view import SearchBookView
 
 MENU = f"""\033[2J\033[H{'-=' * 15}\n\033[0;34m{'BOOKSTORE':^30}\033[0;0;0m\n{'-=' * 15}
 \033[0;32m[0]\033[0;0;0m Exit
@@ -29,13 +31,13 @@ class MainMenuView(Menu):
         elif int_op == 1:
             self.book_service.save(BookBuilder.build())
         elif int_op == 2:
-            pass
+            return RemoveBookView()
         elif int_op == 3:
             pass
         elif int_op == 4:
             pass
         elif int_op == 5:
-            pass
+            return SearchBookView()
         elif int_op == 6:
             pass
 

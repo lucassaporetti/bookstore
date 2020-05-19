@@ -1,5 +1,6 @@
 from abc import ABC
 from bookstore.src.core.repository.repository import Repository
+from bookstore.src.core.util.tools import print_error
 from bookstore.src.model.entity import Entity
 
 
@@ -12,6 +13,11 @@ class Service(ABC):
             self.repository.insert(data)
         else:
             self.repository.update(data)
+
+    def delete(self, data: Entity):
+        self.repository.delete(data)
+        # else:
+        #     print_error('Cannot found that book to delete')
 
     def list(self, filters: str = None) -> list:
         return self.repository.find_all(filters=filters)

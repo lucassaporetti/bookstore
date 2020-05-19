@@ -89,11 +89,17 @@ class MySqlRepository(DbRepository):
         self.cursor.execute(update_stm)
         self.connector.commit()
 
-    def delete(self, entity: Entity):
-        delete_stm = self.sql_factory.delete(entity.__dict__)
-        LOG.info('Executing SQL statement: {}'.format(delete_stm))
-        self.cursor.execute(delete_stm)
-        self.connector.commit()
+    def delete(self, entity_id: str):
+        if entity_id:
+            delete_stm = self.sql_factory.delete(filters=[
+                "UUID = '{}'".format(entity_id)
+            ])
+            LOG.info('Executing SQL statement: {}'.format(delete_stm))
+            self.cursor.execute(delete_stm)
+            self.connector.commit()
+            print(f'Book with index {entity_id} successfully deleted from the database')
+        else:
+            print_error('Cannot delete this book from database')
 
     def find_all(self, filters: str = None) -> Optional[list]:
         if filters is not None:
