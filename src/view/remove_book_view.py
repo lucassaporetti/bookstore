@@ -49,7 +49,7 @@ class RemoveBookView(Menu):
             print_error('Invalid criteria {}'.format(criteria))
 
     def delete_book(self):
-        entity_id = prompt("Book INDEX: ", clear=True)
+        entity_id = prompt("Book UUID: ", clear=True)
         if entity_id:
             found = self.book_service.get(entity_id)
             if found is not None:

@@ -14,10 +14,17 @@ class Service(ABC):
         else:
             self.repository.update(data)
 
+    def update(self, data: Entity):
+        if Entity:
+            self.repository.update(data)
+        else:
+            print_error('Cannot found that book to edit')
+
     def delete(self, data: Entity):
-        self.repository.delete(data)
-        # else:
-        #     print_error('Cannot found that book to delete')
+        if Entity:
+            self.repository.delete(data)
+        else:
+            print_error('Cannot found that book to delete')
 
     def list(self, filters: str = None) -> list:
         return self.repository.find_all(filters=filters)

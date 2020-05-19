@@ -17,11 +17,11 @@ class BookRepository(MySqlRepository):
     def insert(self, book: Book):
         super().insert(book)
 
-    def update(self, book: Book):
-        super().update(book)
+    def update(self, entity_id):
+        super().update(entity_id)
 
-    def delete(self, book: Book):
-        super().delete(book)
+    def delete(self, entity_id):
+        super().delete(entity_id)
 
     def row_to_entity(self, row: tuple) -> Entity:
         return Book.of(list(row))

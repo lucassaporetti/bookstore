@@ -12,17 +12,17 @@ class BookBuilder:
         valid = False
         book = book_name = author_name = published = pages = None
         while not valid:
-            book_name = prompt("Name: ", clear=True).strip() if book_name is None else book_name
+            book_name = prompt("Book Name: ", clear=True).strip() if book_name is None else book_name
             if not validate_string(book_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):
                 print_error(f'Invalid name {book_name}')
                 book_name = None
                 continue
-            author_name = prompt("Author: ").strip() if author_name is None else author_name
+            author_name = prompt("Author Name: ").strip() if author_name is None else author_name
             if not validate_string(author_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):
                 print_error(f'Invalid author name {author_name}')
                 author_name = None
                 continue
-            published = prompt("Published: ").strip() if published is None else published
+            published = prompt("Published date: ").strip() if published is None else published
             if not validate_date(published, "%d/%m/%Y"):
                 print_error(f'Invalid published date {published}')
                 published = None

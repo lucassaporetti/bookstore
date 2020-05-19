@@ -1,11 +1,31 @@
-2020-05-19 14:27:55,760 [MainThread] INFO  ::Main(@line-25) Bookstore started 2020-05-19 14:27:55.760721 
-2020-05-19 14:27:55,760 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
-2020-05-19 14:27:55,762 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
-2020-05-19 14:28:14,565 [MainThread] INFO  ::find_by_id(@line-126) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
-2020-05-19 14:28:14,566 [MainThread] INFO  ::insert(@line-80) Executing SQL statement: INSERT INTO BOOKS (UUID, BOOK_NAME, AUTHOR_NAME, PUBLISHED, PAGES, AVAILABLE) VALUES ('65c9bf37-1abf-4f14-b1d3-e099b1fdf189', 'Gabiroba 4', 'Hugs', '22/04/1999', '145', '1') 
-2020-05-19 14:28:17,424 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
-2020-05-19 14:28:17,426 [MainThread] INFO  ::connect(@line-50) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
-2020-05-19 14:28:20,665 [MainThread] INFO  ::find_all(@line-110) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
-2020-05-19 14:28:34,403 [MainThread] INFO  ::find_by_id(@line-126) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
-2020-05-19 14:28:34,405 [MainThread] INFO  ::delete(@line-97) Executing SQL statement: DELETE FROM BOOKS WHERE 1 = 1 AND UUID = '65c9bf37-1abf-4f14-b1d3-e099b1fdf189' 
-2020-05-19 14:28:37,529 [MainThread] INFO  ::find_all(@line-110) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:25:48,075 [MainThread] INFO  ::Main(@line-25) Bookstore started 2020-05-19 17:25:48.075842 
+2020-05-19 17:25:48,076 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:25:48,078 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:25:53,239 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:25:53,240 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:25:55,533 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:26:09,436 [MainThread] INFO  ::find_by_id(@line-172) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:26:49,548 [MainThread] INFO  ::update(@line-114) Executing SQL statement: UPDATE BOOKS SET BOOK_NAME = 'Harry Potter e o Prisioneiro de Azkhaban' WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:26:49,630 [MainThread] INFO  ::update(@line-120) Executing SQL statement: UPDATE BOOKS SET AUTHOR_NAME = 'JK Rowlling' WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:26:49,727 [MainThread] INFO  ::update(@line-126) Executing SQL statement: UPDATE BOOKS SET PUBLISHED = '22/04/1996' WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:26:49,820 [MainThread] INFO  ::update(@line-132) Executing SQL statement: UPDATE BOOKS SET PAGES = '450' WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:26:52,571 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:26:59,017 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:26:59,019 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:27:00,727 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:27:00,728 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:27:03,808 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:27:12,874 [MainThread] INFO  ::find_by_id(@line-172) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:27:12,876 [MainThread] INFO  ::delete(@line-143) Executing SQL statement: DELETE FROM BOOKS WHERE 1 = 1 AND UUID = 'f8af7e2f-7d0d-450d-ab54-c5269e3cc3c7' 
+2020-05-19 17:27:16,996 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:27:19,825 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:27:19,827 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:27:55,689 [MainThread] INFO  ::find_by_id(@line-172) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = 'c7af8a44-8053-45fa-bf3d-8f23906ea5da' 
+2020-05-19 17:27:55,691 [MainThread] INFO  ::insert(@line-81) Executing SQL statement: INSERT INTO BOOKS (UUID, BOOK_NAME, AUTHOR_NAME, PUBLISHED, PAGES, AVAILABLE) VALUES ('c7af8a44-8053-45fa-bf3d-8f23906ea5da', 'A Lenda da Gabiroba Perdida', 'Hugs', '22/04/1995', '250', '1') 
+2020-05-19 17:28:03,081 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:28:03,084 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 
+2020-05-19 17:28:05,468 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:28:15,652 [MainThread] INFO  ::find_all(@line-156) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1  
+2020-05-19 17:28:26,346 [MainThread] INFO  ::find_by_id(@line-172) Executing SQL statement: SELECT * FROM BOOKS WHERE 1 = 1 AND UUID = 'c7af8a44-8053-45fa-bf3d-8f23906ea5da' 
+2020-05-19 17:28:31,050 [MainThread] INFO  ::read(@line-33) Successfully read 5 properties from /home/lucassaporetti/GIT-Repository/bookstore/bookstore/src/sql/mysql/ddl/book_templates.properties 
+2020-05-19 17:28:31,052 [MainThread] INFO  ::connect(@line-51) Connected to car-rental@0.0.0.0:3306/bookstore_db established 

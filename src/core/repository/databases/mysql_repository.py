@@ -8,7 +8,8 @@ from pymysql import ProgrammingError, OperationalError
 from bookstore.src.core.factory.factories import SqlFactory
 from bookstore.src.core.property.properties import Properties
 from bookstore.src.core.repository.databases.db_repository import DbRepository
-from bookstore.src.core.util.tools import log_init, print_error
+from bookstore.src.core.util.tools import log_init, print_error, prompt
+from bookstore.src.core.validator.validators import validate_string, validate_date, validate_int
 from bookstore.src.main import Main
 from bookstore.src.model.entity import Entity
 
@@ -81,13 +82,58 @@ class MySqlRepository(DbRepository):
         self.cursor.execute(insert_stm)
         self.connector.commit()
 
-    def update(self, entity: Entity):
-        update_stm = self.sql_factory.update(entity.__dict__, filters=[
-            'UUID = {}'.format(entity.uuid)
-        ])
-        LOG.info('Executing SQL statement: {}'.format(update_stm))
-        self.cursor.execute(update_stm)
-        self.connector.commit()
+    def update(self, entity_id: str):
+        if entity_id:
+            valid = False
+            new_book_name = new_author_name = new_published = new_pages = None
+            while not valid:
+                new_book_name = prompt("New Book Name: ", clear=True).strip() if new_book_name is None else new_book_name
+                if not validate_string(new_book_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):
+                    print_error(f'Invalid name {new_book_name}')
+                    new_book_name = None
+                    continue
+                new_author_name = prompt("New Author Name: ").strip() if new_author_name is None else new_author_name
+                if not validate_string(new_author_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):
+                    print_error(f'Invalid author name {new_author_name}')
+                    new_author_name = None
+                    continue
+                new_published = prompt("New Published date: ").strip() if new_published is None else new_published
+                if not validate_date(new_published, "%d/%m/%Y"):
+                    print_error(f'Invalid published date {new_published}')
+                    new_published = None
+                    continue
+                new_pages = prompt("New Pages: ").strip() if new_pages is None else new_pages
+                if not validate_int(new_pages, min_value=1, max_value=1000):
+                    print_error(f'Invalid pages number {new_pages}')
+                    new_pages = None
+                    continue
+                valid = True
+
+            update_stm1 = self.sql_factory.update(key='BOOK_NAME', value=new_book_name,
+                                                  filters=["UUID = '{}'".format(entity_id)])
+            LOG.info('Executing SQL statement: {}'.format(update_stm1))
+            self.cursor.execute(update_stm1)
+            self.connector.commit()
+
+            update_stm2 = self.sql_factory.update(key='AUTHOR_NAME', value=new_author_name,
+                                                  filters=["UUID = '{}'".format(entity_id)])
+            LOG.info('Executing SQL statement: {}'.format(update_stm2))
+            self.cursor.execute(update_stm2)
+            self.connector.commit()
+
+            update_stm3 = self.sql_factory.update(key='PUBLISHED', value=new_published,
+                                                  filters=["UUID = '{}'".format(entity_id)])
+            LOG.info('Executing SQL statement: {}'.format(update_stm3))
+            self.cursor.execute(update_stm3)
+            self.connector.commit()
+
+            update_stm4 = self.sql_factory.update(key='PAGES', value=new_pages,
+                                                  filters=["UUID = '{}'".format(entity_id)])
+            LOG.info('Executing SQL statement: {}'.format(update_stm4))
+            self.cursor.execute(update_stm4)
+            self.connector.commit()
+        else:
+            print_error('Cannot edit this book from database')
 
     def delete(self, entity_id: str):
         if entity_id:

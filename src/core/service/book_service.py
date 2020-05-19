@@ -10,5 +10,8 @@ class BookService(Service):
     def save(self, book: Book):
         super().save(book)
 
-    # def delete(self, book: Book):
-    #     super().delete(book)
+    def delete(self, book: Book):
+        super().delete(book)
+
+    def update(self, book: Book):
+        super().update(book)
