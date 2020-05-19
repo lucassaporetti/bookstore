@@ -19,11 +19,9 @@ class Menu(ABC):
             print(self.menu)
             self.op = prompt("$ ", end='')
             if self.op.isalnum() and self.op_in_options():
-                self.op = self.op
                 return self.trigger_menu_item()
             else:
-                print_error("### Error: Invalid option \"{}\"".format(self.op))
-                self.op = None
+                print_error("Invalid option '{}'".format(self.op))
 
     @abstractmethod
     def trigger_menu_item(self):

@@ -27,15 +27,15 @@ def is_float(number):
     return str(number).isdecimal()
 
 
-def print_error(msg: str, arg: str = None):
-    print(f"\033[0;31m### Error: {msg} \"{arg}\"\033[0;0;0m")
-    sleep(2)
+def print_error(msg: str):
+    print(f"\033[0;31m### Error: {msg}\033[0;0;0m")
+    sleep(0.5)
     print('\033[2A\033[J', end='')
 
 
 def print_warning(msg: str, arg: str = None):
     print(f"\033[0;93m### Warn: {msg} \"{arg}\"\033[0;0;0m")
-    sleep(2)
+    sleep(0.5)
     print('\033[2A\033[J', end='')
 
 

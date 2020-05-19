@@ -41,7 +41,7 @@ class Main:
                 self.view = next_view
 
 
-def exit_app(sig=None, frame=None):
+def exit_app(sig=None):
     print('\033[2J\033[H')
     print('See you later! ;)')
     print('')

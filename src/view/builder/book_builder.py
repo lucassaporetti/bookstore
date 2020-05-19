@@ -10,7 +10,7 @@ class BookBuilder:
     @staticmethod
     def build():
         valid = False
-        book = book_name = author_name = published = pages =  None
+        book = book_name = author_name = published = pages = None
         while not valid:
             book_name = prompt("Book Name: ", clear=True).strip() if book_name is None else book_name
             if not validate_string(book_name, "[a-zA-Z0-9]+", min_len=1, max_len=60):

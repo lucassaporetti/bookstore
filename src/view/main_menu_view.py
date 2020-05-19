@@ -2,7 +2,7 @@ from bookstore.src.core.service.book_service import BookService
 from bookstore.src.view.builder.book_builder import BookBuilder
 from bookstore.src.view.menu import *
 
-MENU = """\033[2J\033[H
+MENU = f"""\033[2J\033[H{'-=' * 15}\n\033[0;34m{'BOOKSTORE':^30}\033[0;0;0m\n{'-=' * 15}
 \033[0;32m[0]\033[0;0;0m Exit
 \033[0;32m[1]\033[0;0;0m Add Book
 \033[0;32m[2]\033[0;0;0m Remove Book
@@ -15,7 +15,7 @@ MENU = """\033[2J\033[H
 class MainMenuView(Menu):
     def __init__(self):
         super().__init__()
-        self.menu = str(MENU)
+        self.menu = MENU
         self.options = range(0, 6)
         self.book_service = BookService()
 
