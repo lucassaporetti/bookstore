@@ -34,10 +34,10 @@ class BookBuilder:
                 continue
             valid = True
             book = Book.Builder() \
-                .with_book_name(book_name) \
                 .with_author_name(author_name) \
+                .with_book_name(book_name) \
+                    .with_pages(pages) \
                 .with_published(published) \
-                .with_pages(pages) \
                 .build()
 
         return book
