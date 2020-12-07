@@ -1,6 +1,6 @@
-from bookstore.src.core.util.tools import prompt, print_error
-from bookstore.src.core.validator.validators import validate_string, validate_int, validate_date
-from bookstore.src.model.book import Book
+from src.core.util.tools import prompt, print_error
+from src.core.validator.validators import validate_string, validate_int, validate_date
+from src.model.book import Book
 
 
 class BookBuilder:

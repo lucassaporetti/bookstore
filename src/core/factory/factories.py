@@ -1,5 +1,5 @@
-from bookstore.src.core.property.properties import Properties
-from bookstore.src.core.util.tools import dict_to_values, list_to_filters, list_to_columns
+from src.core.property.properties import Properties
+from src.core.util.tools import dict_to_values, list_to_filters, list_to_columns
 
 
 class SqlFactory:

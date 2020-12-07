@@ -1,6 +1,6 @@
-from bookstore.src.core.repository.databases.book_repository import BookRepository
-from bookstore.src.core.service.service import Service
-from bookstore.src.model.book import Book
+from src.core.repository.databases.book_repository import BookRepository
+from src.core.service.service import Service
+from src.model.book import Book
 
 
 class BookService(Service):

@@ -1,6 +1,6 @@
 import uuid
-from bookstore.src.core.enum.yes_no import YesNo
-from bookstore.src.model.entity import Entity
+from src.core.enum.yes_no import YesNo
+from src.model.entity import Entity
 
 
 class Book(Entity):

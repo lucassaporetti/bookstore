@@ -13,8 +13,8 @@ import pathlib
 import signal
 import sys
 from datetime import datetime
-from bookstore.src.core.util.tools import log_init
-from bookstore.src.view.main_menu_view import *
+from src.core.util.tools import log_init
+from src.view.main_menu_view import *
 
 CUR_DIR = pathlib.Path(sys.argv[0]).parent.absolute()
 

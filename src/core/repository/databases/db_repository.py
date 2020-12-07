@@ -1,6 +1,6 @@
 from abc import abstractmethod
-from bookstore.src.core.factory.factories import SqlFactory
-from bookstore.src.core.repository.repository import Repository
+from src.core.factory.factories import SqlFactory
+from src.core.repository.repository import Repository
 
 
 class DbRepository(Repository):

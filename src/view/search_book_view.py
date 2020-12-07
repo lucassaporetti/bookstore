@@ -1,8 +1,8 @@
 from pymysql import InternalError
 
-from bookstore.src.core.service.book_service import BookService
-from bookstore.src.core.util.tools import print_list, print_warning, print_error, print_one, prompt
-from bookstore.src.view.menu import Menu
+from src.core.service.book_service import BookService
+from src.core.util.tools import print_list, print_warning, print_error, print_one, prompt
+from src.view.menu import Menu
 
 MENU = f"""\033[2J\033[H{'-=' * 15}\n\033[0;34m{'SEARCH A BOOK':^30}\033[0;0;0m\n{'-=' * 15}
 \033[0;32m[A]\033[0;0;0m Search Book

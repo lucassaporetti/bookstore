@@ -1,7 +1,7 @@
 from abc import ABC
-from bookstore.src.core.repository.repository import Repository
-from bookstore.src.core.util.tools import print_error
-from bookstore.src.model.entity import Entity
+from src.core.repository.repository import Repository
+from src.core.util.tools import print_error
+from src.model.entity import Entity
 
 
 class Service(ABC):

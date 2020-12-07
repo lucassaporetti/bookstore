@@ -5,13 +5,13 @@ from abc import abstractmethod
 from typing import Optional
 import pymysql
 from pymysql import ProgrammingError, OperationalError
-from bookstore.src.core.factory.factories import SqlFactory
-from bookstore.src.core.property.properties import Properties
-from bookstore.src.core.repository.databases.db_repository import DbRepository
-from bookstore.src.core.util.tools import log_init, print_error, prompt
-from bookstore.src.core.validator.validators import validate_string, validate_date, validate_int
-from bookstore.src.main import Main
-from bookstore.src.model.entity import Entity
+from src.core.factory.factories import SqlFactory
+from src.core.property.properties import Properties
+from src.core.repository.databases.db_repository import DbRepository
+from src.core.util.tools import log_init, print_error, prompt
+from src.core.validator.validators import validate_string, validate_date, validate_int
+from src.main import Main
+from src.model.entity import Entity
 
 CUR_DIR = pathlib.Path(sys.argv[0]).parent.absolute()
 DB_PROPERTIES = Properties(f"{CUR_DIR}/db.properties").read()

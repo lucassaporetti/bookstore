@@ -1,10 +1,10 @@
-from bookstore.src.core.service.book_service import BookService
-from bookstore.src.core.util.tools import print_list
-from bookstore.src.view.builder.book_builder import BookBuilder
-from bookstore.src.view.edit_book_view import EditBookView
-from bookstore.src.view.menu import *
-from bookstore.src.view.remove_book_view import RemoveBookView
-from bookstore.src.view.search_book_view import SearchBookView
+from src.core.service.book_service import BookService
+from src.core.util.tools import print_list
+from src.view.builder.book_builder import BookBuilder
+from src.view.edit_book_view import EditBookView
+from src.view.menu import *
+from src.view.remove_book_view import RemoveBookView
+from src.view.search_book_view import SearchBookView
 
 MENU = f"""\033[2J\033[H{'-=' * 15}\n\033[0;34m{'BOOKSTORE':^30}\033[0;0;0m\n{'-=' * 15}
 \033[0;32m[0]\033[0;0;0m Exit

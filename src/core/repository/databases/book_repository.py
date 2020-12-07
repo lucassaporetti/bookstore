@@ -1,10 +1,10 @@
 import pathlib
 import sys
 
-from bookstore.src.core.factory.factories import SqlFactory
-from bookstore.src.core.repository.databases.mysql_repository import MySqlRepository
-from bookstore.src.model.book import Book
-from bookstore.src.model.entity import Entity
+from src.core.factory.factories import SqlFactory
+from src.core.repository.databases.mysql_repository import MySqlRepository
+from src.model.book import Book
+from src.model.entity import Entity
 
 CUR_DIR = pathlib.Path(sys.argv[0]).parent.absolute()
 BOOK_TEMPLATES = f"{CUR_DIR}/sql/mysql/ddl/book_templates.properties"
